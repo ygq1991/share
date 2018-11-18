@@ -12,7 +12,7 @@
 
   ```java
   <bean id="cacheDigestLogInterceptor"
-            class="cn.com.servyou.xqy.framework.log.interceptor.CacheDigestLogInterceptor"/>
+            class="cn.com.ygq.xqy.framework.log.interceptor.CacheDigestLogInterceptor"/>
       <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
           <property name="beanNames">
               <list>
@@ -297,7 +297,7 @@ public DubboServiceAutoProxyCreator() throws ClassNotFoundException, NoSuchMetho
 		<file>${logging.root}/${app.name}/common-exception.log</file>
 		<filter class="ch.qos.logback.core.filter.EvaluatorFilter">
 			<evaluator class="ch.qos.logback.classic.boolex.JaninoEventEvaluator">
-				<expression>return throwable != null &amp;&amp; (cn.com.servyou.xqy.framework.exception.BusinessException.class.isInstance(throwable) || cn.com.servyou.xqy.framework.exception.XQYException.class.isInstance(throwable));</expression>
+				<expression>return throwable != null &amp;&amp; (cn.com.ygq.xqy.framework.exception.BusinessException.class.isInstance(throwable) || cn.com.ygq.xqy.framework.exception.XQYException.class.isInstance(throwable));</expression>
 			</evaluator>
 			<onMatch>ACCEPT</onMatch>
 			<onMismatch>DENY</onMismatch>
